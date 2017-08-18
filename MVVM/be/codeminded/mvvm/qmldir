@@ -1,0 +1,4 @@
+module be.codeminded.mvvm
+plugin mvvmplugin
+classname MvvmPlugin
+typeinfo plugins.qmltypes
