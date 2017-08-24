@@ -24,7 +24,7 @@ public:
                             [=]{ return true; }));
         cCmd->add( new RelayCommand ([=] { qWarning() << "Hello2 from C++ RelayCommand"; },
                             [=]{ return true; }));
-        proxyCmd = new CommandProxy (helloCmd, this);
+        proxyCmd = new CommandProxy (helloCmd);
     }
     CommandProxy* helloCommand() {
         return proxyCmd;
