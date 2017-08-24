@@ -3,15 +3,15 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
-#include <MVVM/Commands/DelegateCommand.h>
+#include <MVVM/Commands/RelayCommand.h>
 
 
-DelegateCommand* lambdaCommand = 0;
+RelayCommand* lambdaCommand = 0;
 
 static QObject* singleton_provider (QQmlEngine *, QJSEngine *)
 {
    if (lambdaCommand == 0) {
-       lambdaCommand = new  DelegateCommand ( [&] { qWarning() << "Lambda"; },
+       lambdaCommand = new  RelayCommand ( [&] { qWarning() << "Lambda"; },
                [&] { return true; } );
    }
    return lambdaCommand;
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
 
-    qmlRegisterSingletonType<DelegateCommand>("Example", 1, 0, "LambdaCommand", singleton_provider);
+    qmlRegisterSingletonType<RelayCommand>("Example", 1, 0, "LambdaCommand", singleton_provider);
 
     engine.addImportPath(QMLDIR);
     engine.addPluginPath(SODIR);

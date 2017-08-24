@@ -7,11 +7,11 @@
 
 #include <MVVM/Commands/AbstractCommand.h>
 
-class DelegateCommand : public AbstractCommand
+class RelayCommand : public AbstractCommand
 {
     Q_OBJECT
 public:
-    DelegateCommand(std::function<void()> executeDelegatep,
+    RelayCommand(std::function<void()> executeDelegatep,
                     std::function<bool()> canExecuteDelegatep,
                     QObject *parent = 0)
     : AbstractCommand(parent)

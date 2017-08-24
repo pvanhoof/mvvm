@@ -7,7 +7,7 @@
 #include <MVVM/Commands/AbstractCommand.h>
 #include <MVVM/Commands/CommandProxy.h>
 #include <MVVM/Commands/CompositeCommand.h>
-#include <MVVM/Commands/DelegateCommand.h>
+#include <MVVM/Commands/RelayCommand.h>
 #include <MVVM/Commands/EmitCommand.h>
 #include <MVVM/Commands/ListCommand.h>
 
@@ -21,7 +21,7 @@ void MvvmPlugin::registerTypes(const char* uri)
 
     qmlRegisterType<CommandProxy>(uri, 1,0, "CommandProxy");
     qmlRegisterType<CompositeCommand>(uri, 1,0, "CompositeCommand");
-    qmlRegisterUncreatableType<DelegateCommand>(uri, 1,0, "DelegateCommand", "uncreatable");
+    qmlRegisterUncreatableType<RelayCommand>(uri, 1,0, "DelegateCommand", "uncreatable");
     qmlRegisterType<EmitCommand>(uri, 1,0, "EmitCommand");
     qmlRegisterType<ListCommand>(uri, 1,0, "ListCommand");
 

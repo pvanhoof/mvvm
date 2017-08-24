@@ -5,21 +5,21 @@ TEMPLATE = lib
 INCLUDEPATH += ..
 SOURCES += \
     Commands/CompositeCommand.cpp \
-    Commands/DelegateCommand.cpp \
     Commands/ListCommand.cpp \
     Commands/EmitCommand.cpp \
     Commands/CommandProxy.cpp \
     Models/CommandListModel.cpp \
-    MvvmPlugin.cpp
+    MvvmPlugin.cpp \
+    Commands/RelayCommand.cpp
 HEADERS += \
     Commands/AbstractCommand.h \
     Commands/CompositeCommand.h \
-    Commands/DelegateCommand.h \
     Commands/ListCommand.h \
     Commands/EmitCommand.h \
     Commands/CommandProxy.h \
     Models/CommandListModel.h \
-    MvvmPlugin.h
+    MvvmPlugin.h \
+    Commands/RelayCommand.h
 OTHER_FILES = be/codeminded/mvvm/qmldir Examples/*
 unix {
     target.path = /usr/lib
