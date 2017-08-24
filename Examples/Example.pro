@@ -13,3 +13,6 @@ DEFINES += SODIR=\\\"$$OUT_PWD/../MVVM/\\\"
 DEFINES += QMLDIR=\\\"$$PWD/../MVVM\\\"
 LIBS += -L$$OUT_PWD/../MVVM -lmvvmplugin
 RESOURCES += qml.qrc
+
+HEADERS += \
+    viewmodel.h

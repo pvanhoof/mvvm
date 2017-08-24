@@ -11,9 +11,24 @@ Window {
     height: 360
     visible: true
 
+    View {
+        id: view
+        height: 40
+        anchors {
+            top: parent.top
+            left: parent.left
+            right: parent.right
+        }
+    }
+
     ListView {
         id: listView
-        anchors.fill: parent
+        anchors {
+            top: view.bottom
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+        }
 
         delegate: Item {
             height: 20
@@ -35,11 +50,6 @@ Window {
 
         CommandListModel {
             id: comsModel
-
-            ListCommand {
-                text: "C++ Lambda command"
-                command:  A.LambdaCommand
-            }
 
             ListCommand {
                 text: "Enable combined"

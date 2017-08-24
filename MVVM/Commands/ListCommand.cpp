@@ -2,6 +2,12 @@
 
 #include "ListCommand.h"
 
+ListCommand::ListCommand(const QSharedPointer<AbstractCommand> &newCommand, QObject *parent)
+    :AbstractCommand(parent)
+{
+    setCommand(newCommand);
+}
+
 bool ListCommand::canExecute() const
 {
     if(!cmd.isNull())

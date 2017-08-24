@@ -1,5 +1,6 @@
 <RCC>
 	<qresource prefix="/">
 		<file>Example.qml</file>
+		<file>View.qml</file>
 	</qresource>
 </RCC>

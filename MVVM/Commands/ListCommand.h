@@ -12,6 +12,8 @@ class ListCommand : public AbstractCommand
     Q_PROPERTY(QString text READ text WRITE setText NOTIFY textChanged)
 public:
     ListCommand(QObject *parent = 0):AbstractCommand(parent){}
+    ListCommand(const QSharedPointer<AbstractCommand> &newCommand, QObject *parent = 0);
+
     void execute() Q_DECL_OVERRIDE;
     bool canExecute() const Q_DECL_OVERRIDE;
     AbstractCommand* command() const;
