@@ -10,7 +10,8 @@ SOURCES += \
     Commands/CommandProxy.cpp \
     Models/CommandListModel.cpp \
     MvvmPlugin.cpp \
-    Commands/RelayCommand.cpp
+    Commands/RelayCommand.cpp \
+    Commands/AbstractAsyncCommand.cpp
 HEADERS += \
     Commands/AbstractCommand.h \
     Commands/CompositeCommand.h \
@@ -19,7 +20,8 @@ HEADERS += \
     Commands/CommandProxy.h \
     Models/CommandListModel.h \
     MvvmPlugin.h \
-    Commands/RelayCommand.h
+    Commands/RelayCommand.h \
+    Commands/AbstractAsyncCommand.h
 OTHER_FILES = be/codeminded/mvvm/qmldir Examples/*
 unix {
     target.path = /usr/lib
