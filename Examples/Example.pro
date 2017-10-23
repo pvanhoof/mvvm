@@ -3,7 +3,8 @@ QT += qml
 TARGET = example
 TEMPLATE = app
 INCLUDEPATH += ..
-SOURCES += Example.cpp
+SOURCES += Example.cpp \
+    asynchellocommand.cpp
 OTHER_FILES = ../qmldir .
 unix {
     target.path = /usr/lib
@@ -15,4 +16,5 @@ LIBS += -L$$OUT_PWD/../MVVM -lmvvmplugin
 RESOURCES += qml.qrc
 
 HEADERS += \
-    viewmodel.h
+    viewmodel.h \
+    asynchellocommand.h

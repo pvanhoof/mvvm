@@ -13,7 +13,7 @@ Window {
 
     View {
         id: view
-        height: 40
+        height: 150
         anchors {
             top: parent.top
             left: parent.left
@@ -73,11 +73,11 @@ Window {
                 text: "Combined emit commands"
                 command: CompositeCommand {
                     EmitCommand {
-                        onExecutes: console.warn( "Emit command 1");
+                        onExecutes: console.warn("Emit command 1");
                         canExecute: listView.combineCanExecute
                     }
                     EmitCommand {
-                        onExecutes: console.warn( "Emit command 2");
+                        onExecutes: console.warn("Emit command 2");
                         canExecute: listView.combineCanExecute
                     }
                 }
