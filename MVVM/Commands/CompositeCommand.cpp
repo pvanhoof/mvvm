@@ -121,4 +121,3 @@ void CompositeCommand::clearCommands(QQmlListProperty<AbstractCommand> *lst)
 {
     reinterpret_cast<CompositeCommand *>(lst->data)->clearCommands();
 }
-

@@ -63,5 +63,3 @@ void ListCommand::setText(const QString &newValue)
         emit textChanged();
     }
 }
-
-

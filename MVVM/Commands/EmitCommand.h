@@ -3,8 +3,7 @@
 
 #include <MVVM/Commands/AbstractCommand.h>
 
-class EmitCommand : public AbstractCommand
-{
+class EmitCommand : public AbstractCommand {
     Q_OBJECT
     Q_PROPERTY(bool canExecute READ canExecute WRITE setCanExecute NOTIFY privateCanExecuteChanged)
 public:

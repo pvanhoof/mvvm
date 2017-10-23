@@ -5,8 +5,7 @@
 
 #include <MVVM/Commands/AbstractCommand.h>
 
-class ListCommand : public AbstractCommand
-{
+class ListCommand : public AbstractCommand{
     Q_OBJECT
     Q_PROPERTY(AbstractCommand *command READ command WRITE setCommand NOTIFY commandChanged)
     Q_PROPERTY(QString text READ text WRITE setText NOTIFY textChanged)

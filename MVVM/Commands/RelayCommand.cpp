@@ -14,6 +14,3 @@ void RelayCommand::execute()
 {
     executeDelegate();
 }
-
-
-

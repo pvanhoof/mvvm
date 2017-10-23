@@ -2,11 +2,12 @@
 #define DELEGATE_COMMAND_H
 
 #include <functional>
+
 #include <QSharedPointer>
+
 #include <MVVM/Commands/AbstractCommand.h>
 
-class RelayCommand : public AbstractCommand
-{
+class RelayCommand : public AbstractCommand {
     Q_OBJECT
 public:
     RelayCommand(std::function<void()> executeDelegatep,
@@ -24,6 +25,5 @@ private:
     std::function<void()> executeDelegate;
     std::function<bool()> canExecuteDelegate;
 };
-
 
 #endif // DELEGATE_COMMAND_H
