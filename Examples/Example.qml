@@ -4,7 +4,7 @@ import QtQuick.Controls 1.2
 
 import be.codeminded.mvvm 1.0
 
-import Example 1.0 as A
+import Example 1.0
 
 Window {
     width: 360
@@ -13,7 +13,7 @@ Window {
 
     View {
         id: view
-        height: 150
+        height: childrenRect.height
         anchors {
             top: parent.top
             left: parent.left

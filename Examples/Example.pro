@@ -4,7 +4,8 @@ TARGET = example
 TEMPLATE = app
 INCLUDEPATH += ..
 SOURCES += Example.cpp \
-    asynchellocommand.cpp
+    asynchellocommand.cpp \
+    viewmodel.cpp
 OTHER_FILES = ../qmldir .
 unix {
     target.path = /usr/lib
@@ -17,4 +18,5 @@ RESOURCES += qml.qrc
 
 HEADERS += \
     viewmodel.h \
-    asynchellocommand.h
+    asynchellocommand.h \
+    examplelistclass.h

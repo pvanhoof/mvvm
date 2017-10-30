@@ -21,7 +21,8 @@ HEADERS += \
     Models/CommandListModel.h \
     MvvmPlugin.h \
     Commands/RelayCommand.h \
-    Commands/AbstractAsyncCommand.h
+    Commands/AbstractAsyncCommand.h \
+    Models/QmlQObjectList.h
 OTHER_FILES = be/codeminded/mvvm/qmldir Examples/*
 unix {
     target.path = /usr/lib
